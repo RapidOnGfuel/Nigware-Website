@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
 
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .flashy-text {
+      animation: flashy-text 3s infinite;
+    }
+
+    @keyframes flashy-text {
+      0% {
+        color: red;
+      }
+      50% {
+        color: green;
+      }
+      100% {
+        color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Welcome to my flashy website!</h1>
+    <p class="flashy-text">This text is animated using CSS keyframes.</p>
+  </div>
+
+  <script>
+    // This script adds a "flashy" class to the body element
+    // when the user clicks anywhere on the page.
+
+    document.body.addEventListener('click', function() {
+      document.body.classList.toggle('flashy');
+    });
+  </script>
+</body>
+</html>
